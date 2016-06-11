@@ -3,12 +3,14 @@
 version: '2'
 services:
   db:
+    environment:
+      NEO4J_AUTH: 'none'
     image: neo4j:3.0
     ports:
       - '7474:7474'
   web:
     build: .
-    command: bundle exec rails server --port 3000 --binding '0.0.0.0'
+    command: /bin/sh -c "sleep 5; bundle exec rails server --port 3000 --binding '0.0.0.0'"
     volumes:
       - .:/myapp
     volumes_from:
