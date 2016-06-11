@@ -42,5 +42,5 @@ Rails.application.configure do
 
   # Set the port for the neo4j test database server
   config.neo4j.session_type = :server_db
-  config.neo4j.session_path = 'http://localhost:7575'
+  config.neo4j.session_path = ENV['NEO4J_URL']
 end
