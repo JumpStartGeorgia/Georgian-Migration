@@ -13,17 +13,11 @@ services:
     command: /bin/sh -c "sleep 5; bundle exec rails server --port 3000 --binding '0.0.0.0'"
     volumes:
       - .:/myapp
-    volumes_from:
-      - bundle
+      - bundle:/bundle
     ports:
       - '3000:3000'
     depends_on:
       - db
+volumes:
   bundle:
-    # 'image' will vary depending on your docker-compose
-    # project name. You may need to run `docker-compose build web`
-    # before this works.
-    image: georgian_migration_web
-    command: echo "Look at me, I'm a bundle container!"
-    volumes:
-      - /bundle
+    external: false
