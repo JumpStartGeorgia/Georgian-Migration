@@ -38,7 +38,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 
   # Acceptance testing
-  gem 'capybara', '~> 2.3.0'
+  gem 'capybara', '~> 2.7.1'
 end
 
 group :development do
