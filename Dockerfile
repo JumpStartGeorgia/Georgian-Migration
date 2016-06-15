@@ -18,3 +18,5 @@ WORKDIR $APP_HOME
 ADD Gemfile* $APP_HOME/
 
 ADD . $APP_HOME/
+
+RUN echo "alias be='bundle exec'" >> ~/.bashrc
