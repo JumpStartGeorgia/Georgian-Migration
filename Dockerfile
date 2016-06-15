@@ -15,8 +15,8 @@ ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-ADD Gemfile* $APP_HOME/
-
 ADD . $APP_HOME/
 
 RUN echo "alias be='bundle exec'" >> ~/.bashrc
+
+RUN bundle install
