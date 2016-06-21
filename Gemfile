@@ -33,9 +33,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to get a debugger console
   gem 'pry-byebug', '~> 3.3'
+end
 
+group :test do
   # Testing framework
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+
+  # Fake data for tests
+  gem 'factory_girl', '~> 4.7'
 
   # Acceptance testing
   gem 'capybara', '~> 2.7.1'
