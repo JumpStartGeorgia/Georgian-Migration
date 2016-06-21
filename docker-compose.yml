@@ -11,8 +11,14 @@ services:
     command: /bin/sh -c "sleep 8; rm -f tmp/pids/server.pid; bundle exec rails server --port 3000 --binding '0.0.0.0'"
     volumes:
       - .:/myapp
-      - /bundle
+    volumes_from:
+      - bundle
     ports:
       - '3000:3000'
     depends_on:
       - db
+  bundle:
+    image: georgianmigration_web
+    volumes:
+      - /bundle
+    command: echo "Loading up bundled gems!"
