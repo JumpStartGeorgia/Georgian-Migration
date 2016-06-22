@@ -44,6 +44,9 @@ group :test do
 
   # Acceptance testing
   gem 'capybara', '~> 2.7.1'
+
+  # Run specs with an empty database
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 end
 
 group :development do
