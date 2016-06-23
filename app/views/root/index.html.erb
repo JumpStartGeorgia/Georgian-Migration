@@ -1,1 +1,15 @@
-<h1>Migration in Georgia</h1>
+<h1>
+  Migration in Georgia
+</h1>
+
+<ul>
+
+  <% @regions.each do |region| %>
+
+    <li>
+      <%= region.name %>
+    </li>
+
+  <% end %>
+
+</ul>
