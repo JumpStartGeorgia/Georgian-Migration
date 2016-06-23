@@ -3,7 +3,7 @@ RSpec.configure do |config|
     :neo4j,
     connection: {
       type: :server_db,
-      path: 'http://db:7474'
+      path: 'http://neo4j-test:7474'
     }
   ].strategy = :deletion
 

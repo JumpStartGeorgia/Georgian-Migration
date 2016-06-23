@@ -37,5 +37,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.neo4j.session_type = :server_db
-  config.neo4j.session_path = ENV['NEO4J_URL']
+  config.neo4j.session_path = 'http://neo4j:7474/'
 end
