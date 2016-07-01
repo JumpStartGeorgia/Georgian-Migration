@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'root/index.html.erb' do
   context 'when there is a region' do
     it "displays the region's name" do
-      region = FactoryGirl.create(:region, name: 'Tbilisi')
+      region = RegionCell.call(FactoryGirl.create(:region, name: 'Tbilisi')).call
       assign(:regions, [region])
 
       render

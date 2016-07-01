@@ -2,17 +2,20 @@
   Migration in Georgia
 </h1>
 
-<% if @regions.each do |region| %>
+<ul>
 
-  <li>
-    <%= region.name %>
-  </li>
+  <% if @regions.each do |region| %>
 
-<% end.empty? %>
+    <li>
+      <%= region %>
+    </li>
 
-  <p>
-    No regions have been created.
-  </p>
+  <% end.empty? %>
 
-<% end %>
-  
+    <li>
+      No regions have been created.
+    </li>
+
+  <% end %>
+
+</ul>

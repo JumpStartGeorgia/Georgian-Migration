@@ -1,5 +1,5 @@
 class RootController < ApplicationController
   def index
-    @regions = Region.all
+    @regions = Region.all.map { |region| cell(:region, region).call }
   end
 end

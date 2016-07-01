@@ -8,8 +8,8 @@ describe RootController do
     end
 
     it 'assigns all Regions to @regions' do
-      region1 = FactoryGirl.create(:region)
-      region2 = FactoryGirl.create(:region)
+      region1 = RegionCell.call(FactoryGirl.create(:region)).call
+      region2 = RegionCell.call(FactoryGirl.create(:region)).call
 
       get :index
       expect(assigns(:regions)).to eq([region1, region2])
