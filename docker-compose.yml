@@ -16,7 +16,7 @@ services:
 
   web:
     build: .
-    command: /bin/sh -c "sleep 13; rm -f tmp/pids/server.pid; bundle exec rails server --port 3000 --binding '0.0.0.0'"
+    command: bundle exec rails server --port 3000 --binding '0.0.0.0'
     volumes:
       - .:/myapp
     volumes_from:
